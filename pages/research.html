@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-bold text-lg">Job Search Assistant</a>
+            <div class="space-x-4">
+                <a href="assessment.html" class="hover:underline">Assessment</a>
+                <a href="tracker.html" class="hover:underline">Tracker</a>
+                <a href="research.html" class="hover:underline">Research</a>
+                <a href="analytics.html" class="hover:underline">Analytics</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto p-4">
+        <h1 class="text-2xl font-semibold mb-4">Company Research</h1>
+        <form id="company-form" class="bg-white p-4 rounded shadow mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Company Name</label>
+                    <input type="text" id="companyName" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Size</label>
+                    <input type="text" id="companySize" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Culture</label>
+                    <input type="text" id="companyCulture" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Salary Range</label>
+                    <input type="text" id="salaryRange" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Location</label>
+                    <input type="text" id="companyLocation" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Priority</label>
+                    <input type="number" id="priority" min="1" max="5" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Career Path</label>
+                    <select id="researchCareerPath" class="mt-1 block w-full border-gray-300 rounded-md">
+                        <option value="">Select Path</option>
+                        <option value="Frontend/Mobile Developer">Frontend/Mobile Developer</option>
+                        <option value="Digital Marketing Specialist">Digital Marketing Specialist</option>
+                        <option value="IT Specialist">IT Specialist</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Website</label>
+                    <input type="url" id="companyUrl" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+            </div>
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700">Notes</label>
+                <textarea id="companyNotes" rows="3" class="mt-1 block w-full border-gray-300 rounded-md"></textarea>
+            </div>
+            <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Add Company</button>
+        </form>
+        <div class="bg-white p-4 rounded shadow">
+            <table class="min-w-full divide-y divide-gray-200" id="company-table">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Size</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Culture</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Salary Range</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Location</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Priority</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Career Path</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Website</th>
+                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Notes</th>
+                        <th class="px-4 py-2"></th>
+                    </tr>
+                </thead>
+                <tbody id="company-body" class="divide-y divide-gray-200">
+                    <!-- Company rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../assets/js/storage.js"></script>
+    <!-- <script src="../assets/js/research.js"></script> -->
+</body>
+</html>
