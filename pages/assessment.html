@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Assessment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-bold text-lg">Job Search Assistant</a>
+            <div class="space-x-4">
+                <a href="assessment.html" class="hover:underline">Assessment</a>
+                <a href="tracker.html" class="hover:underline">Tracker</a>
+                <a href="research.html" class="hover:underline">Research</a>
+                <a href="analytics.html" class="hover:underline">Analytics</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto p-4">
+        <h1 class="text-2xl font-semibold mb-4">Career Path Assessment</h1>
+        <div id="question-container" class="bg-white p-4 rounded shadow mb-4">
+            <!-- Questions will be injected here -->
+        </div>
+        <div id="navigation-buttons" class="flex justify-between">
+            <button id="prev-btn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded" disabled>Previous</button>
+            <button id="next-btn" class="bg-blue-600 text-white px-4 py-2 rounded">Next</button>
+        </div>
+        <div id="results-container" class="mt-4"></div>
+    </main>
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/assessment.js"></script>
+</body>
+</html>
