@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-bold text-lg">Job Search Assistant</a>
+            <div class="space-x-4">
+                <a href="assessment.html" class="hover:underline">Assessment</a>
+                <a href="tracker.html" class="hover:underline">Tracker</a>
+                <a href="research.html" class="hover:underline">Research</a>
+                <a href="analytics.html" class="hover:underline">Analytics</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto p-4">
+        <h1 class="text-2xl font-semibold mb-4">Job Application Tracker</h1>
+        <!-- Form -->
+        <form id="application-form" class="bg-white p-4 rounded shadow mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Company</label>
+                    <input type="text" id="company" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Position</label>
+                    <input type="text" id="position" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Date Applied</label>
+                    <input type="date" id="dateApplied" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Status</label>
+                    <select id="status" class="mt-1 block w-full border-gray-300 rounded-md">
+                        <option value="Applied">Applied</option>
+                        <option value="Phone Screen">Phone Screen</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Rejected">Rejected</option>
+                        <option value="Offer">Offer</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Interview Date</label>
+                    <input type="date" id="interviewDate" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Salary</label>
+                    <input type="number" id="salary" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Location</label>
+                    <input type="text" id="location" class="mt-1 block w-full border-gray-300 rounded-md" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Career Path</label>
+                    <select id="careerPath" class="mt-1 block w-full border-gray-300 rounded-md">
+                        <option value="">Select Path</option>
+                        <option value="Frontend/Mobile Developer">Frontend/Mobile Developer</option>
+                        <option value="Digital Marketing Specialist">Digital Marketing Specialist</option>
+                        <option value="IT Specialist">IT Specialist</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700">Notes</label>
+                <textarea id="notes" rows="3" class="mt-1 block w-full border-gray-300 rounded-md"></textarea>
+            </div>
+            <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Add Application</button>
+        </form>
+
+        <!-- Applications Table -->
+        <div class="bg-white p-4 rounded shadow">
+            <div class="flex justify-between items-center mb-2">
+                <input type="text" id="search" placeholder="Search..." class="border border-gray-300 rounded-md p-2 w-full md:w-1/3" />
+                <button id="export-btn" class="bg-green-600 text-white px-4 py-2 rounded md:ml-4">Export CSV</button>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200" id="applications-table">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Company</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Position</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Date Applied</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Interview Date</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Career Path</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Salary</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Location</th>
+                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Notes</th>
+                            <th class="px-4 py-2"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="applications-body" class="divide-y divide-gray-200">
+                        <!-- Application rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/tracker.js"></script>
+</body>
+</html>
